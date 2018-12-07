@@ -4,5 +4,7 @@ module.exports = function () {
     var   connectionString =
         'mongodb://localhost/';
     connectionString += databaseName;
-    mongoose.connect(connectionString);
+
+    const hurl = "mongodb://shaival:Shaival123@ds127954.mlab.com:27954/heroku_414kdl1k"
+    mongoose.connect(hurl);
 };
