@@ -14,15 +14,12 @@ function answerQuestion(qid,sid,newAnswer) {
         student : sid,
         question : qid,
         trueFalseAnswer : newAnswer.trueFalseAnswer,
-        multipleChoiceAnswer : newAnswer.multipleChoiceAnswer}
-    ;
-
+        multipleChoiceAnswer : newAnswer.multipleChoiceAnswer};
     return answerModel.create(answer);
 }
 
 function findAllAnswers(){
     return answerModel.find();
-
 }
 module.exports = {findAnswersByStudent,
     findAnswersByQuestion,

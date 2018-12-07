@@ -5,9 +5,7 @@ module.exports = app =>{
     app.get('/api/question', findAllQuestions);
     app.get('/api/question/:id',findQuestionById)
     app.put('/api/question/:id',updateQuestion)
-
 const questionDao = require('../daos/question.dao.server')
-
     function createQuestion(req, res) {
         questionDao.createQuestion(req.body).then(question => res.send(question))
     }

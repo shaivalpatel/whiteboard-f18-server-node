@@ -1,6 +1,5 @@
 const questionModel = require('../models/question.model.server');
 
-
 function findAllQuestions(){
     return questionModel.find();
 }
