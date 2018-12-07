@@ -1,6 +1,5 @@
 const answerModel = require('../models/answer.model.server');
 
-
 function findAnswersByStudent(sid,qid){
     return answerModel.find({student:sid, question:qid});
 }

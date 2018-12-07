@@ -5,11 +5,7 @@ module.exports = app =>{
     app.get('/api/question/:qid/student/:sid/answer',findAnswersByQuestion);
     app.get('/api/answer', findAllAnswers);
 
-
-
-
     const answerDao = require('../daos/answer.dao.server')
-
 
     function answerQuestion(req, res) {
         answerDao.answerQuestion(req.params['sid'],req.params['qid'],req.body).then(answer => res.send(answer))
@@ -29,6 +25,5 @@ module.exports = app =>{
     function findAllAnswers(req,res){
         answerDao.findAllAnswers().then((answers) => res.send(answers));
     }
-  
 
 };
